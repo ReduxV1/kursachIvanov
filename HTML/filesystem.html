@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>Выбор ФС и разметка диска — Windows 11</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/filesystem.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="menu-bar">
+            <nav class="header-menu desktop-menu">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#sections" class="dropdown-trigger">Разделы ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="os-selection.html">Выбор операционной системы</a></li>
+                            <li><a href="filesystem.html">Выбор ФС и разметка диска</a></li>
+                            <li class="dropdown">
+                                <a href="#archive-tools" class="dropdown-trigger">Средства архивации данных ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="WinRAR.html">WinRAR</a></li>
+                                    <li><a href="7zip.html">7-Zip</a></li>
+                                    <li><a href="PeaZIP.html">PeaZIP</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#backup-tools" class="dropdown-trigger">Средства резервного копирования ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="RuBackup.html">RuBackup</a></li>
+                                    <li><a href="HandyBackup.html">Handy Backup</a></li>
+                                    <li><a href="YandexBackup.html">Yandex Backup</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#ssilki" class="dropdown-trigger">Ссылки на официальные сайты ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.win-rar.com/start.html?&L=4" target="_blank">WinRAR</a></li>
+                            <li><a href="https://www.7-zip.org/" target="_blank">7zip</a></li>
+                            <li><a href="https://peazip.github.io/" target="_blank">PeaZIP</a></li>
+                            <li><a href="https://www.rubackup.ru/" target="_blank">RuBackup</a></li>
+                            <li><a href="https://www.handybackup.ru/" target="_blank">Handy Backup</a></li>
+                            <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Yandex Backup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="author.html">Автор</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+    </header>
+
+    <main class="page-container">
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Выбор файловой системы и разметка диска в Windows 11</h1>
+                <p class="page-subtitle">Практическое руководство по выбору NTFS/exFAT и разметке дисков с помощью встроенных инструментов Windows 11.</p>
+            </div>
+        </section>
+
+        <section class="fs-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Какую файловую систему выбрать</h2>
+                    <p>Кратко о назначении распространённых ФС в Windows 11.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>NTFS (рекомендуется для системного и внутренних дисков)</h3>
+                        <ul class="bullets">
+                            <li>Поддержка прав доступа (ACL), шифрования (EFS), сжатия, квот</li>
+                            <li>Надёжность: журналирование, самовосстановление</li>
+                            <li>Ограничения: совместимость с другими ОС ниже, чем у exFAT</li>
+                        </ul>
+                        <div class="note">Используйте NTFS для системного диска и постоянных внутренних разделов.</div>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>exFAT (съёмные носители, обмен данными)</h3>
+                        <ul class="bullets">
+                            <li>Совместима с Windows, macOS и многими устройствами</li>
+                            <li>Нет ограничений 4 ГБ на файл (в сравнении с FAT32)</li>
+                            <li>Нет журналирования и развитой безопасности как в NTFS</li>
+                        </ul>
+                        <div class="note">Выбирайте exFAT для флешек и внешних SSD/HDD, если важна совместимость.</div>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>FAT32 (устаревшая, для совместимости со старыми устройствами)</h3>
+                        <ul class="bullets">
+                            <li>Макс. размер файла 4 ГБ, раздела — до 32 ГБ в стандартных утилитах</li>
+                            <li>Минимум возможностей по безопасности и надёжности</li>
+                        </ul>
+                        <div class="note">Используйте только при необходимости совместимости со старыми устройствами.</div>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>ReFS (серверные сценарии)</h3>
+                        <ul class="bullets">
+                            <li>Повышенная устойчивость к повреждениям, масштабируемость</li>
+                            <li>Ограниченная поддержка в клиентских версиях Windows 11</li>
+                        </ul>
+                        <div class="note">Для домашних/учебных сценариев обычно не требуется.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="partitioning">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Разметка диска: базовый план</h2>
+                    <p>Пример разумной схемы для одного физического диска в ПК.</p>
+                </div>
+
+                <div class="plan-grid">
+                    <div class="plan-item">
+                        <h4>Системный раздел (C:)</h4>
+                        <ul class="bullets">
+                            <li>Файловая система: NTFS</li>
+                            <li>Размер: 80–150 ГБ (в зависимости от объёма ПО)</li>
+                            <li>Назначение: Windows 11, программы</li>
+                        </ul>
+                    </div>
+                    <div class="plan-item">
+                        <h4>Данные (D:)</h4>
+                        <ul class="bullets">
+                            <li>Файловая система: NTFS</li>
+                            <li>Размер: остальное пространство диска</li>
+                            <li>Назначение: документы, проекты, учебные материалы</li>
+                        </ul>
+                    </div>
+                    <div class="plan-item">
+                        <h4>Внешние носители</h4>
+                        <ul class="bullets">
+                            <li>exFAT для флешек и переносных SSD/HDD</li>
+                            <li>Для совместимости между Windows/macOS/устройствами</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    Перед любыми операциями с разделами сделайте резервную копию важных данных.
+                </div>
+            </div>
+        </section>
+
+        <section class="tools">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Инструменты Windows 11</h2>
+                    <p>Два встроенных способа управлять разделами и файловыми системами.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="tool-card">
+                        <h3>Графически: Управление дисками</h3>
+                        <ol class="steps">
+                            <li>Нажмите Win+X → «Управление дисками».</li>
+                            <li>Выберите диск/раздел → ПКМ → «Сжать том…» или «Удалить том…» (при необходимости).</li>
+                            <li>На нераспределённой области: ПКМ → «Создать простой том…» → укажите размер и букву.</li>
+                            <li>Выберите файловую систему: NTFS (для внутренних), exFAT (для внешних).</li>
+                            <li>Быстрое форматирование и метка тома → Готово.</li>
+                        </ol>
+                    </article>
+
+                    <article class="tool-card">
+                        <h3>Консольно: diskpart (для опытных пользователей)</h3>
+                        <ol class="steps">
+                            <li>Откройте «Командная строка (Администратор)» или PowerShell (Администратор).</li>
+                            <li>Запустите diskpart и выберите диск/раздел:
+                                <pre class="code">diskpart
+list disk
+select disk 0
+list partition
+select partition 3</pre>
+                            </li>
+                            <li>Создание раздела и форматирование:
+                                <pre class="code">create partition primary size=102400
+format fs=ntfs quick label=Data
+assign letter=D
+exit</pre>
+                            </li>
+                        </ol>
+                        <div class="note">Будьте внимательны: команды diskpart необратимы при ошибочном выборе диска/раздела.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="mbr-gpt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Схема разметки диска: MBR или GPT</h2>
+                    <p>Что выбрать и как проверить текущую схему.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>GPT (GUID Partition Table)</h3>
+                        <ul class="bullets">
+                            <li>Рекомендуется для Windows 11 с UEFI</li>
+                            <li>До 128 разделов без расширенных/логических</li>
+                            <li>Поддержка больших дисков (>2 ТБ)</li>
+                            <li>Повышенная надёжность (резервные таблицы, CRC)</li>
+                        </ul>
+                        <div class="note">Выбирайте GPT на современных ПК с прошивкой UEFI — это требование для установки Windows 11.</div>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>MBR (Master Boot Record)</h3>
+                        <ul class="bullets">
+                            <li>Совместимость со старым BIOS</li>
+                            <li>Ограничение диска ~2 ТБ и до 4 первичных разделов</li>
+                            <li>Требует расширенных/логических разделов при >4</li>
+                        </ul>
+                        <div class="note">Используется для старых систем. Для Windows 11 предпочтителен GPT.</div>
+                    </article>
+                </div>
+
+                <div class="section-header">
+                    <h3>Как проверить схему (MBR/GPT)</h3>
+                </div>
+                <ol class="steps">
+                    <li>Win+X → «Управление дисками» → ПКМ по диску (слева) → «Свойства» → вкладка «Тома» → «Стиль разделов».</li>
+                    <li>Через PowerShell (Администратор):
+                        <pre class="code">Get-Disk | Format-List Number, FriendlyName, PartitionStyle, Size</pre>
+                    </li>
+                </ol>
+
+                <div class="section-header">
+                    <h3>Как конвертировать MBR → GPT</h3>
+                </div>
+                <div class="cards-grid">
+                    <article class="tool-card">
+                        <h4>Без потери данных: mbr2gpt (для системного диска)</h4>
+                        <ol class="steps">
+                            <li>Создайте резервную копию важных данных.</li>
+                            <li>Откройте «Командная строка (Администратор)».</li>
+                            <li>Проверьте диск:
+<pre class="code">mbr2gpt /validate /disk:0 /allowFullOS</pre>
+                            </li>
+                            <li>Выполните конвертацию:
+<pre class="code">mbr2gpt /convert /disk:0 /allowFullOS</pre>
+                            </li>
+                            <li>В BIOS/UEFI включите режим UEFI (выключите Legacy/CSM) и перезагрузитесь.</li>
+                        </ol>
+                        <div class="note">Требуются свободные слоты для системных разделов EFI/MSR. Утилита выдаст причину отказа при проверке.</div>
+                    </article>
+
+                    <article class="tool-card">
+                        <h4>С очисткой диска: diskpart (удаляет данные)</h4>
+                        <ol class="steps">
+                            <li>Сделайте резервную копию. Действие необратимо.</li>
+                            <li>Откройте Командную строку (Администратор):
+<pre class="code">diskpart
+list disk
+select disk 1
+clean
+convert gpt
+exit</pre>
+                            </li>
+                            <li>Создайте разделы и форматируйте (см. раздел «Инструменты Windows 11»).</li>
+                        </ol>
+                        <div class="warning">Этот метод стирает все разделы и данные выбранного диска.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Рекомендации и замечания</h2>
+                </div>
+                <ul class="bullets">
+                    <li>Для системного и рабочих разделов внутри ПК — NTFS.</li>
+                    <li>Для обмена с другими ОС/устройствами — exFAT на внешних носителях.</li>
+                    <li>Резервное копирование данных перед изменением разметки обязательно.</li>
+                    <li>Проверяйте тома: <code class="code-inline">chkdsk C: /scan</code> или через свойства диска.</li>
+                    <li>Используйте «Сжать том» вместо удаления, чтобы не потерять данные при переразметке.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/mobile-menu.js"></script>
+    <script type="module" src="../js/utils.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+
+

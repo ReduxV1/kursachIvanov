@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>PeaZip — Архивация данных</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/peazip.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="menu-bar">
+            <nav class="header-menu desktop-menu">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#sections" class="dropdown-trigger">Разделы ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="os-selection.html">Выбор операционной системы</a></li>
+                            <li><a href="filesystem.html">Выбор ФС и разметка диска</a></li>
+                            <li class="dropdown">
+                                <a href="#archive-tools" class="dropdown-trigger">Средства архивации данных ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="WinRAR.html">WinRAR</a></li>
+                                    <li><a href="7zip.html">7-Zip</a></li>
+                                    <li><a href="PeaZIP.html">PeaZIP</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="diagnost-management.html">Средства резервного копирования</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#ssilki" class="dropdown-trigger">Ссылки на официальные сайты ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.win-rar.com/start.html?&L=4" target="_blank">WinRAR</a></li>
+                            <li><a href="https://www.7-zip.org/" target="_blank">7zip</a></li>
+                            <li><a href="https://peazip.github.io/" target="_blank">PeaZIP</a></li>
+                            <li><a href="https://www.rubackup.ru/" target="_blank">RuBackup</a></li>
+                            <li><a href="https://www.handybackup.ru/" target="_blank">Handy Backup</a></li>
+                            <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Yandex Backup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="author.html">Автор</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+    </header>
+
+    <main class="page-container">
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">PeaZip — бесплатный кроссплатформенный архиватор</h1>
+                <p class="page-subtitle">UI-оболочка для ряда движков сжатия, богатая поддержка форматов, портативные сборки.</p>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Краткий обзор</h2>
+                    <p>PeaZip — свободный архиватор с удобным интерфейсом, поддержкой множества форматов и кроссплатформенностью.</p>
+                </div>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>Поддерживаемые форматы</h3>
+                        <ul class="bullets">
+                            <li>Создание: 7z, ZIP, TAR, WIM, PEA</li>
+                            <li>Распаковка: RAR/RAR5, ACE, ARJ, CAB, GZ, ISO, XZ и др.</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Ключевые возможности</h3>
+                        <ul class="bullets">
+                            <li>Поддержка шифрования (AES‑256 и др.)</li>
+                            <li>Разделение на тома, проверка целостности</li>
+                            <li>Интеграция в контекстное меню Проводника</li>
+                            <li>Портабельные версии без установки</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Как пользоваться</h2>
+                </div>
+                <div class="cards-grid">
+                    <article class="tool-card">
+                        <h3>Через интерфейс</h3>
+                        <ol class="steps">
+                            <li>Откройте PeaZip → «Add» (Добавить) для создания архива.</li>
+                            <li>Выберите формат (например, 7z/zip), метод сжатия и пароль (опционально).</li>
+                            <li>Нажмите «OK» и дождитесь завершения.</li>
+                        </ol>
+                    </article>
+                    <article class="tool-card">
+                        <h3>CLI (при наличии консольных инструментов)</h3>
+                        <ol class="steps">
+                            <li>PeaZip использует внешние движки (7z/pea и др.). Команды аналогичны 7‑Zip.</li>
+                            <li>Пример (7z):
+<pre class="code">7z a -tzip backup.zip .\data
+7z x backup.zip -o.\restore</pre>
+                            </li>
+                        </ol>
+                        <div class="note">Для некоторых форматов потребуется установить соответствующие backend‑утилиты.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Рекомендации</h2>
+                </div>
+                <ul class="bullets">
+                    <li>Для лучшего сжатия используйте форматы 7z/LZMA2.</li>
+                    <li>Для совместимости выбирайте ZIP.</li>
+                    <li>Проверяйте архивы после создания средствами проверки целостности.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/mobile-menu.js"></script>
+    <script type="module" src="../js/utils.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+

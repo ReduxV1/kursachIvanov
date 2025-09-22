@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>Handy Backup — Резервное копирование</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/handybackup.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="menu-bar">
+            <nav class="header-menu desktop-menu">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#sections" class="dropdown-trigger">Разделы ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="os-selection.html">Выбор операционной системы</a></li>
+                            <li><a href="filesystem.html">Выбор ФС и разметка диска</a></li>
+                            <li class="dropdown">
+                                <a href="#archive-tools" class="dropdown-trigger">Средства архивации данных ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="WinRAR.html">WinRAR</a></li>
+                                    <li><a href="7zip.html">7-Zip</a></li>
+                                    <li><a href="PeaZIP.html">PeaZIP</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#backup-tools" class="dropdown-trigger">Средства резервного копирования ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="RuBackup.html">RuBackup</a></li>
+                                    <li><a href="HandyBackup.html">Handy Backup</a></li>
+                                    <li><a href="YandexBackup.html">Yandex Backup</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="author.html">Автор</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+    </header>
+
+    <main class="page-container">
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Handy Backup — резервное копирование для Windows</h1>
+                <p class="page-subtitle">Гибкие сценарии бэкапа, резервирование БД и приложений, расписания.</p>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Краткий обзор</h2>
+                    <p>Утилита для автоматизации резервных копий рабочих станций и серверов Windows.</p>
+                </div>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>Возможности</h3>
+                        <ul class="bullets">
+                            <li>Полный/инкрементальный/дифференциальный бэкап</li>
+                            <li>Резервирование баз данных (SQL) и виртуальных машин</li>
+                            <li>Шифрование, сжатие, версияция</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Хранилища</h3>
+                        <ul class="bullets">
+                            <li>Локальные/сетевые диски (SMB), FTP/SFTP</li>
+                            <li>Облачные провайдеры</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Как настроить</h2>
+                </div>
+                <div class="cards-grid">
+                    <article class="tool-card">
+                        <h3>Быстрый старт</h3>
+                        <ol class="steps">
+                            <li>Создайте задачу бэкапа и выберите источники.</li>
+                            <li>Укажите место хранения, частоту и тип копии.</li>
+                            <li>Включите шифрование/сжатие, настройте уведомления.</li>
+                        </ol>
+                    </article>
+                    <article class="tool-card">
+                        <h3>Советы</h3>
+                        <ul class="bullets">
+                            <li>Регулярно проверяйте восстановление из копий.</li>
+                            <li>Храните резервные копии на отдельном физическом носителе.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/mobile-menu.js"></script>
+    <script type="module" src="../js/utils.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+

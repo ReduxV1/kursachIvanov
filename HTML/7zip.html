@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>7-Zip — Архивация данных</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/sevenzip.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="menu-bar">
+            <nav class="header-menu desktop-menu">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#sections" class="dropdown-trigger">Разделы ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="os-selection.html">Выбор операционной системы</a></li>
+                            <li><a href="filesystem.html">Выбор ФС и разметка диска</a></li>
+                            <li class="dropdown">
+                                <a href="#archive-tools" class="dropdown-trigger">Средства архивации данных ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="WinRAR.html">WinRAR</a></li>
+                                    <li><a href="7zip.html">7-Zip</a></li>
+                                    <li><a href="PeaZIP.html">PeaZIP</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="diagnost-management.html">Средства резервного копирования</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#ssilki" class="dropdown-trigger">Ссылки на официальные сайты ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.win-rar.com/start.html?&L=4" target="_blank">WinRAR</a></li>
+                            <li><a href="https://www.7-zip.org/" target="_blank">7zip</a></li>
+                            <li><a href="https://peazip.github.io/" target="_blank">PeaZIP</a></li>
+                            <li><a href="https://www.rubackup.ru/" target="_blank">RuBackup</a></li>
+                            <li><a href="https://www.handybackup.ru/" target="_blank">Handy Backup</a></li>
+                            <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Yandex Backup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="author.html">Автор</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+    </header>
+
+    <main class="page-container">
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">7‑Zip — бесплатный архиватор с высокими показателями сжатия</h1>
+                <p class="page-subtitle">Формат 7z с алгоритмом LZMA/LZMA2, открытая лицензия, консольная утилита 7z.exe.</p>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Краткий обзор</h2>
+                    <p>7‑Zip — свободно распространяемый архиватор, известный эффективностью и поддержкой множества форматов.</p>
+                </div>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>Поддерживаемые форматы</h3>
+                        <ul class="bullets">
+                            <li>Создание: 7z, ZIP, TAR, WIM</li>
+                            <li>Распаковка: RAR/RAR5, ARJ, CAB, GZ, ISO, XZ, Z и др.</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Ключевые возможности</h3>
+                        <ul class="bullets">
+                            <li>Высокая степень сжатия (LZMA/LZMA2)</li>
+                            <li>Шифрование AES‑256 (7z)</li>
+                            <li>Интеграция в контекстное меню Проводника</li>
+                            <li>Портабельная версия, локализация интерфейса</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Как пользоваться</h2>
+                </div>
+                <div class="cards-grid">
+                    <article class="tool-card">
+                        <h3>Через Проводник</h3>
+                        <ol class="steps">
+                            <li>Выделите файлы/папки → ПКМ → «7‑Zip» → «Добавить к архиву…».</li>
+                            <li>Выберите формат 7z или ZIP, метод сжатия, пароль (опционально).</li>
+                            <li>Подтвердите и дождитесь завершения.</li>
+                        </ol>
+                    </article>
+                    <article class="tool-card">
+                        <h3>Через командную строку</h3>
+                        <ol class="steps">
+                            <li>Используйте 7z.exe (в каталоге установки) или добавьте в PATH.</li>
+                            <li>Примеры:
+<pre class="code">7z a -t7z -m0=lzma2 -mx=9 backup.7z .\data
+7z a -t7z -pPAROL -mhe=on -v500m archive.7z .\big_folder
+7z t archive.7z
+7z x archive.7z -o.\restore</pre>
+                            </li>
+                        </ol>
+                        <div class="note">-mx=9 — макс. сжатие; -mhe — шифрование имён; -v — тома.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Рекомендации</h2>
+                </div>
+                <ul class="bullets">
+                    <li>Для лучшего сжатия используйте 7z/LZMA2 и словарь побольше (при достаточной ОЗУ).</li>
+                    <li>Для совместимости выбирайте ZIP.</li>
+                    <li>Для больших архивов используйте тома: -v100m, -v1g и т.д.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/mobile-menu.js"></script>
+    <script type="module" src="../js/utils.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+
+

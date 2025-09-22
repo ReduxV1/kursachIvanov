@@ -1,0 +1,20 @@
+/* Page-specific styles for PeaZip page */
+
+.page-container { padding-bottom: 32px; }
+.container { width: min(1200px, 92vw); margin: 0 auto; }
+.page-hero { padding: 32px 0 16px; }
+.page-title { margin: 0 0 8px 0; }
+.page-subtitle { color: #cfd2d6; margin: 0; }
+.section-header { text-align: center; margin: 20px 0 16px 0; }
+
+.cards-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.info-card, .tool-card { background: rgba(14, 15, 18, 0.6); border: 1px solid rgba(197, 164, 126, 0.25); border-radius: 12px; padding: 16px; }
+.bullets { margin: 10px 0 0 0; padding-left: 18px; }
+.bullets li { margin: 6px 0; }
+.steps { margin: 10px 0 0 0; padding-left: 18px; }
+.code { display: block; background: #0b0c0f; border: 1px solid rgba(197, 164, 126, 0.25); border-radius: 10px; padding: 10px; color: #cfd2d6; white-space: pre-wrap; }
+.note { margin-top: 10px; color: #d7c4a9; }
+
+@media (max-width: 992px) { .cards-grid { grid-template-columns: 1fr; } }
+
+

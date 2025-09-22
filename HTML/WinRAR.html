@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>WinRAR — Архивация данных</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/winrar.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="menu-bar">
+            <nav class="header-menu desktop-menu">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#sections" class="dropdown-trigger">Разделы ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="os-selection.html">Выбор операционной системы</a></li>
+                            <li><a href="filesystem.html">Выбор ФС и разметка диска</a></li>
+                            <li class="dropdown">
+                                <a href="#archive-tools" class="dropdown-trigger">Средства архивации данных ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="WinRAR.html">WinRAR</a></li>
+                                    <li><a href="7zip.html">7-Zip</a></li>
+                                    <li><a href="PeaZIP.html">PeaZIP</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="diagnost-management.html">Средства резервного копирования</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#ssilki" class="dropdown-trigger">Ссылки на официальные сайты ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.win-rar.com/start.html?&L=4" target="_blank">WinRAR</a></li>
+                            <li><a href="https://www.7-zip.org/" target="_blank">7zip</a></li>
+                            <li><a href="https://peazip.github.io/" target="_blank">PeaZIP</a></li>
+                            <li><a href="https://www.rubackup.ru/" target="_blank">RuBackup</a></li>
+                            <li><a href="https://www.handybackup.ru/" target="_blank">Handy Backup</a></li>
+                            <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Yandex Backup</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="author.html">Автор</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+    </header>
+
+    <main class="page-container">
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">WinRAR — популярный архиватор для Windows</h1>
+                <p class="page-subtitle">Форматы RAR/RAR5/ZIP, высокая степень сжатия, интеграция с Проводником.</p>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Краткий обзор</h2>
+                    <p>WinRAR — коммерческий архиватор с пробным периодом, известный стабильностью и мощными возможностями.</p>
+                </div>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>Поддерживаемые форматы</h3>
+                        <ul class="bullets">
+                            <li>Создание: RAR, RAR5, ZIP</li>
+                            <li>Распаковка: 7z, ARJ, BZ2, CAB, GZ, ISO, LZ, TAR, XZ, Z и др.</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Ключевые возможности</h3>
+                        <ul class="bullets">
+                            <li>Пароли и шифрование AES‑256 (RAR5)</li>
+                            <li>Восстановление архивов, тома восстановления</li>
+                            <li>Разделение на тома, обновление и синхронизация содержимого</li>
+                            <li>Интеграция в контекстное меню проводника</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Как пользоваться</h2>
+                </div>
+                <div class="cards-grid">
+                    <article class="tool-card">
+                        <h3>Через Проводник</h3>
+                        <ol class="steps">
+                            <li>Выделите файлы/папки → ПКМ → «Добавить в архив…».</li>
+                            <li>Выберите формат RAR5 или ZIP, уровень сжатия, пароль (опционально).</li>
+                            <li>Подтвердите и дождитесь завершения.</li>
+                        </ol>
+                    </article>
+                    <article class="tool-card">
+                        <h3>Через командную строку</h3>
+                        <ol class="steps">
+                            <li>Перейдите в папку с rar.exe или добавьте её в PATH.</li>
+                            <li>Примеры:
+<pre class="code">rar a -ma5 -ep1 -m5 -r backup.rar .\data
+rar a -ma5 -hpPAROL -v500m archive.part.rar .\big_folder
+rar t archive.rar
+rar x archive.rar .\restore</pre>
+                            </li>
+                        </ol>
+                        <div class="note">-ma5 — RAR5; -hp — шифрование имён; -v — размер томов; -m5 — макс. сжатие.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Рекомендации</h2>
+                </div>
+                <ul class="bullets">
+                    <li>Для долговременного хранения используйте RAR5 с паролем и томами восстановления.</li>
+                    <li>Для обмена с пользователями без WinRAR используйте ZIP.</li>
+                    <li>Проверяйте архивы командой теста после создания.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/mobile-menu.js"></script>
+    <script type="module" src="../js/utils.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
+
+
