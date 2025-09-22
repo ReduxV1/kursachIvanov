@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>Системное ПО - Курсовая работа</title>
+    <style>
+        
+    </style>
+
+</head>
+
+
+
+<body>
+    <header class="main-header">
+        <div class="header-logo">
+            <img src="izobr/logo.svg" alt="Логотип" class="logo-img"> 
+        </div>
+<!-- сделать свой лого-->        
+        <!-- Обычное меню для десктопа -->
+        <nav class="header-menu desktop-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#sections" class="dropdown-trigger">Разделы ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="html/os-selection.html">Выбор операционной системы</a></li>
+                        <li><a href="html/filesystem.html">Выбор ФС и разметка диска</a></li>
+                        <li><a href="html/remote-management.html">Средства архивации данных</a></li>
+                        <li><a href="html/diagnost-management.html">Средства резервного копирования</a></li>
+                    </ul> 
+    <!-- свои разделы тут-->
+                </li>
+                <li class="dropdown">
+                    <a href="#ssilki" class="dropdown-trigger">Ссылки на официальные сайты ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.win-rar.com/start.html?&L=4" target="_blank">WinRAR</a></li>
+                        <li><a href="https://www.7-zip.org/" target="_blank">7zip</a></li>
+                        <li><a href="https://peazip.github.io/" target="_blank">PeaZIP</a></li>
+                        <li><a href="https://www.rubackup.ru/" target="_blank">RuBackup</a></li>
+                        <li><a href="https://www.handybackup.ru/" target="_blank">Handy Backup</a></li>
+                        <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Yandex Backup</a></li>
+                    </ul>
+                </li>
+                <li><a href="html/author.html">Автор</a></li>
+            </ul>
+        </nav>
+
+    <!-- Оверлей для закрытия меню -->
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+
+
+    <main class="slider-container">
+        <!-- Слайд 1 -->
+        <section class="slide" aria-hidden="false">
+            <div class="slide-bg"></div>
+            <div class="slide-content"> 
+                <div class="content-block" id="main-content-block">
+                    <div class="divider-gold" id="main-divider"></div>
+                    <p class="discipline" id="main-discipline">
+                        Курсовой проект по дисциплине<br>
+                        «Системное администрирование»
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Слайд 2 -->
+        <section class="slide" aria-hidden="true">
+            <div class="slide-bg"></div>
+            <div class="slide-content">
+                <div class="divider-gold" id="top-divider"></div>
+                <div class="content-article" id="content-window">
+                    <h2 class="discipline animated-title" id="main-title" style="color: #c5a47e; text-align: center; margin-bottom: 25px;">
+                        Приветствую
+                    </h2>
+                    <div class="article-text" id="article-content">
+                        <p class="specs">Сайт создан как курсовой проект по дисциплине «Системное администрирование» на тему:</p>
+                        <p class="specs">«Разработка Web-страницы с описанием разделов системного программного обеспечения»</p>
+                        <p class="specs">Далее по сайту будет меню с категориями которые вы можете выбрать.</p>
+                    </div>
+                    <div class="divider-gold" id="bottom-divider" style="margin-top: 25px;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Скрипты -->
+    <script type="module" src="js/menu.js"></script>
+    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/mobile-menu.js"></script>
+    <script type="module" src="js/animations.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
