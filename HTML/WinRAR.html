@@ -28,7 +28,14 @@
                                     <li><a href="PeaZIP.html">PeaZIP</a></li>
                                 </ul>
                             </li>
-                            <li><a href="diagnost-management.html">Средства резервного копирования</a></li>
+                            <li class="dropdown">
+                                <a href="#backup-tools" class="dropdown-trigger">Средства резервного копирования ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="AOMEI.html">AOMEI</a></li>
+                                    <li><a href="HandyBackup.html">Handy Backup</a></li>
+                                    <li><a href="Storj.html">Storj</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -37,9 +44,9 @@
                             <li><a href="https://www.win-rar.com/start.html?&L=4" target="_blank">WinRAR</a></li>
                             <li><a href="https://www.7-zip.org/" target="_blank">7zip</a></li>
                             <li><a href="https://peazip.github.io/" target="_blank">PeaZIP</a></li>
-                            <li><a href="https://www.rubackup.ru/" target="_blank">RuBackup</a></li>
+                            <li><a href="https://www.AOMEI.ru/" target="_blank">AOMEI</a></li>
                             <li><a href="https://www.handybackup.ru/" target="_blank">Handy Backup</a></li>
-                            <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Yandex Backup</a></li>
+                            <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Storj</a></li>
                         </ul>
                     </li>
                     <li><a href="author.html">Автор</a></li>
@@ -61,7 +68,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Краткий обзор</h2>
-                    <p>WinRAR — коммерческий архиватор с пробным периодом, известный стабильностью и мощными возможностями.</p>
+                    <p>WinRAR — коммерческий архиватор с пробным пе��иодом, известный стабильностью и мощными возможностями.</p>
                 </div>
                 <div class="cards-grid">
                     <article class="info-card">
@@ -127,6 +134,127 @@ rar x archive.rar .\restore</pre>
                 </ul>
             </div>
         </section>
+
+        <section class="details">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Дополнительно</h2>
+                </div>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>Системные требования</h3>
+                        <ul class="bullets">
+                            <li>Windows 7/8/8.1/10/11; Windows Server 2008 R2–2022</li>
+                            <li>Архитектура: x86/x64; место на диске ~20–50 МБ</li>
+                            <li>Интеграция в Проводник и ассоциации файлов по желанию</li>
+                            <li>Поддержка длинных имён файлов и Unicode</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Лицензирование и приобретение</h3>
+                        <ul class="bullets">
+                            <li>Пробный период около 40 дней с полным функционалом</li>
+                            <li>Именные и корпоративные лицензии; скидки при объёме покупок</li>
+                            <li>Обновления в пределах мажорной версии бесплатно</li>
+                            <li>Техническая поддержка для лицензированных пользователей</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Интеграция и автоматизация</h3>
+                        <ul class="bullets">
+                            <li>rar.exe и unrar.exe для сценариев и CI/CD</li>
+                            <li>Поддержка переменных окружения и шаблонов именования</li>
+                            <li>Резервные тома (RV) для повышения надёжности архивов</li>
+                            <li>Возможность создания SFX‑архивов с настраиваемым интерфейсом</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Полезные материалы</h3>
+                        <ul class="bullets">
+                            <li><a href="https://www.win-rar.com/help.html" target="_blank">Руководство пользователя</a></li>
+                            <li><a href="https://www.rarlab.com/rar_add.htm" target="_blank">Справка по ключам rar.exe</a></li>
+                            <li><a href="https://www.win-rar.com/faq.html" target="_blank">FAQ и решение проблем</a></li>
+                            <li><a href="https://www.rarlab.com/themes.htm" target="_blank">Темы оформления</a></li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Практические рекомендации</h3>
+                        <ul class="bullets">
+                            <li>Для архивов >4 ГБ используйте тома (например, ‑v1g)</li>
+                            <li>Для долговременного хранения — RAR5 + пароли + записи восстановления</li>
+                            <li>Для совместимости — ZIP, для скорости — m3/m4 вместо m5</li>
+                            <li>Регулярно обновляйте WinRAR для поддержки новых форматов</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Частые проблемы и решения</h3>
+                        <ul class="bullets">
+                            <li>«Неизвестный формат» — обновите WinRAR/UnRAR до актуальной версии</li>
+                            <li>«Запрещён доступ» — запустите от администратора или проверьте ACL</li>
+                            <li>«Повреждён архив» — попробуйте восстановление и проверку контрольных сумм</li>
+                            <li>Медленная работа — отключите антивирус для папки с архивами</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="experiments" id="experiments">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Эксперименты</h2>
+                </div>
+
+                <article class="experiment">
+                    <h3>Эксперимент 1</h3>
+                    <p class="experiment-desc">Извлечение файла(-ов) из архива</p>
+                    <div class="screenshots-grid grid-2">
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/WinRar1/Screenshot 2025-09-22 225127.png" alt="Эксперимент 1 — Скриншот 1"></div>
+                            <div class="caption">Подпись к изображению 1</div>
+                        </div>
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/WinRar1/Screenshot 2025-09-22 225147.png" alt="Эксперимент 1 — Скриншот 2"></div>
+                            <div class="caption">Подпись к изображению 2</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experiment">
+                    <h3>Эксперимент 2</h3>
+                    <p class="experiment-desc">Место для описания эксперимента 2.</p>
+                    <div class="screenshots-grid grid-3">
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/WinRar2/Screenshot 2025-09-22 225210.png" alt="Эксперимент 2 — Скриншот 1"></div>
+                            <div class="caption">Подпись к изображению 1</div>
+                        </div>
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/WinRar2/Screenshot 2025-09-22 225308.png" alt="Эксперимент 2 — Скриншот 2"></div>
+                            <div class="caption">Подпись к изображению 2</div>
+                        </div>
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/WinRar2/Screenshot 2025-09-22 225316.png" alt="Эксперимент 2 — Скриншот 3"></div>
+                            <div class="caption">Подпись к изображению 3</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experiment">
+                    <h3>Эксперимент 3</h3>
+                    <p class="experiment-desc">Место для описания эксперимента 3.</p>
+                    <div class="screenshots-grid grid-2">
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/WinRar3/Screenshot 2025-09-22 225723.png" alt="Эксперимент 3 — Скриншот 1"></div>
+                            <div class="caption">Подпись к изображению 1</div>
+                        </div>
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/WinRar3/Screenshot 2025-09-22 225757.png" alt="Эксперимент 3 — Скриншот 2"></div>
+                            <div class="caption">Подпись к изображению 2</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
     <script type="module" src="../js/menu.js"></script>
@@ -135,5 +263,3 @@ rar x archive.rar .\restore</pre>
     <script type="module" src="../js/main.js"></script>
 </body>
 </html>
-
-

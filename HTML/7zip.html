@@ -28,7 +28,14 @@
                                     <li><a href="PeaZIP.html">PeaZIP</a></li>
                                 </ul>
                             </li>
-                            <li><a href="diagnost-management.html">Средства резервного копирования</a></li>
+                            <li class="dropdown">
+                                <a href="#backup-tools" class="dropdown-trigger">Средства резервного копирования ▸</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="AOMEI.html">AOMEI</a></li>
+                                    <li><a href="HandyBackup.html">Handy Backup</a></li>
+                                    <li><a href="Storj.html">Storj</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -37,9 +44,9 @@
                             <li><a href="https://www.win-rar.com/start.html?&L=4" target="_blank">WinRAR</a></li>
                             <li><a href="https://www.7-zip.org/" target="_blank">7zip</a></li>
                             <li><a href="https://peazip.github.io/" target="_blank">PeaZIP</a></li>
-                            <li><a href="https://www.rubackup.ru/" target="_blank">RuBackup</a></li>
+                            <li><a href="https://www.AOMEI.ru/" target="_blank">AOMEI</a></li>
                             <li><a href="https://www.handybackup.ru/" target="_blank">Handy Backup</a></li>
-                            <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Yandex Backup</a></li>
+                            <li><a href="https://yandex.cloud/ru/services/backup?utm_referrer=about%3Ablank" target="_blank">Storj</a></li>
                         </ul>
                     </li>
                     <li><a href="author.html">Автор</a></li>
@@ -127,6 +134,132 @@
                 </ul>
             </div>
         </section>
+
+        <section class="details">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Дополнительно</h2>
+                </div>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>Лицензия и исходники</h3>
+                        <ul class="bullets">
+                            <li>Свободно распространяется под лицензией LGPL; часть модулей — под собственными лицензиями</li>
+                            <li>Исходный код доступен на официальном сайте 7‑Zip</li>
+                            <li>Разрешено использование в коммерческих целях при соблюдении условий лицензии</li>
+                            <li>Активное сообщество разработчиков и переводчиков</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Системные требования</h3>
+                        <ul class="bullets">
+                            <li>Windows 7/8/10/11 (x86/x64); портативная версия доступна</li>
+                            <li>Низкие требования к ОЗУ/CPU; для больших словарей LZMA2 нужно больше ОЗУ</li>
+                            <li>Поддержка локализаций интерфейса, интеграция в Проводник</li>
+                            <li>Версии для Linux и macOS (p7zip)</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Особенности формата 7z</h3>
+                        <ul class="bullets">
+                            <li>Методы LZMA/LZMA2, PPMd, BZip2; словарь до сотен МБ</li>
+                            <li>Шифрование AES‑256, опция шифрования имён (‑mhe)</li>
+                            <li>Высокая степень сжатия на медленных пресетах (mx=9) ценой ��ремени</li>
+                            <li>Поддержка твёрдых архивов для лучшего сжатия</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Шпаргалка по CLI</h3>
+                        <div>
+<pre class="code">:: Создать архив 7z с максимальным сжатием
+7z a -t7z -m0=lzma2 -mx=9 -mfb=64 -md=256m backup.7z .\data
+
+:: Создать зашифрованный архив с томами по 500 МБ
+7z a -t7z -pPAROL -mhe=on -v500m archive.7z .\big_folder
+
+:: Проверить/распаковать
+7z t archive.7z
+7z x archive.7z -o.\restore</pre>
+                        </div>
+                    </article>
+                    <article class="info-card">
+                        <h3>Практические рекомендации</h3>
+                        <ul class="bullets">
+                            <li>Для обмена с разными системами используйте ZIP; для максимального сжатия — 7z/LZMA2</li>
+                            <li>Подбирайте размер словаря исходя из доступной ОЗУ; тестируйте mx=7/9</li>
+                            <li>Для бо��ьших наборов данных используйте тома (‑v) и проверку целостности</li>
+                            <li>Регулярно обновляйте 7‑Zip для поддержки новых форматов</li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Полезные ресурсы</h3>
+                        <ul class="bullets">
+                            <li><a href="https://www.7-zip.org/" target="_blank">Официальный сайт 7‑Zip</a></li>
+                            <li><a href="https://sevenzip.osdn.jp/chm/cmdline/" target="_blank">Руководство по командной строке</a></li>
+                            <li><a href="https://sourceforge.net/projects/sevenzip/" target="_blank">Репозиторий исходников</a></li>
+                            <li><a href="https://www.7-zip.org/history.txt" target="_blank">История версий</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="experiments" id="experiments">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Эксперименты</h2>
+                </div>
+
+                <article class="experiment">
+                    <h3>Эксперимент 1</h3>
+                    <p class="experiment-desc">Извлечение файла(-ов) из архива</p>
+                    <div class="screenshots-grid grid-2">
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/7zip1/Screenshot 2025-09-22 230329.png" alt="Эксперимент 1 — Скриншот 1"></div>
+                            <div class="caption">Подпись к изображению 1</div>
+                        </div>
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/7zip1/Screenshot 2025-09-22 230404.png" alt="Эксперимент 1 — Скриншот 2"></div>
+                            <div class="caption">Подпись к изображению 2</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experiment">
+                    <h3>Эксперимент 2</h3>
+                    <p class="experiment-desc">Место для описания эксперимента 2.</p>
+                    <div class="screenshots-grid grid-2">
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/7zip2/Screenshot 2025-09-22 230419.png" alt="Эксперимент 2 — Скриншот 1"></div>
+                            <div class="caption">Подпись к изображению 1</div>
+                        </div>
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/7zip2/Screenshot 2025-09-22 230430.png" alt="Эксперимент 2 — Скриншот 2"></div>
+                            <div class="caption">Подпись к изображению 2</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experiment">
+                    <h3>Эксперимент 3</h3>
+                    <p class="experiment-desc">Место для описания эксперимента 3.</p>
+                    <div class="screenshots-grid grid-3">
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/7zip3/Screenshot 2025-09-22 230446.png" alt="Эксперимент 3 — Скриншот 1"></div>
+                            <div class="caption">Подпись к изображению 1</div>
+                        </div>
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/7zip3/Screenshot 2025-09-22 230514.png" alt="Эксперимент 3 — Скриншот 2"></div>
+                            <div class="caption">Подпись к изображению 2</div>
+                        </div>
+                        <div class="screenshot-slot">
+                            <div class="img-box"><img src="../izobr/7zip3/Screenshot 2025-09-22 230550.png" alt="Эксперимент 3 — Скриншот 3"></div>
+                            <div class="caption">Подпись к изображению 3</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
     <script type="module" src="../js/menu.js"></script>
@@ -135,5 +268,3 @@
     <script type="module" src="../js/main.js"></script>
 </body>
 </html>
-
-
